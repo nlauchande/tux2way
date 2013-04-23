@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.0
+Created-By: 1.6.0_38-b05 (Sun Microsystems Inc.)
+Built-By: nlauchande
+
+Name: common
+Specification-Title: Example
+Specification-Version: C:\Users\nlauchande\mengworkspace\Elen7045Assig
+ nment1Spike\0.01
+Specification-Vendor: HeuristicaLDA
+Implementation-Title: tuxtwowayroad
+Implementation-Version: C:\Users\nlauchande\mengworkspace\Elen7045Assi
+ gnment1Spike\0.01 ${TODAY}
+Implementation-Vendor: HeuristicaLDA.
+
+Name: common/class1.class
+Sealed: false
+
