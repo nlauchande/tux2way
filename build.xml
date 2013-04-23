@@ -21,11 +21,8 @@
 
 	<!-- top level targets -->
 	<target name="compile" depends="init" description="compile the source code " >
-		<javac srcdir="${test}" destdir="${build}">
+		<javac srcdir="${src}" destdir="${build}">
 			<classpath>
-				<fileset dir="lib">
-					<include name="**/*.jar"/>
-				</fileset>
 			</classpath>
 		</javac>
 	</target>
@@ -66,7 +63,7 @@
 			</classpath>
  		  <batchtest fork="yes" todir="${reports}/raw/">
 		  	<formatter type="xml"/>
-		    <fileset dir="${src}">
+		    <fileset dir="${test}">
 		      <include name="**/*Test*.java"/>
 		    </fileset>
 		  </batchtest>
@@ -85,8 +82,7 @@
 	<target name ="run" depends="" description="if this project can be run, run it" >
 	</target>
 
-	<!-- supporting targets -->
-
+	<!--supporting target init-->
 	<target name="init" description="initialize the build environment" >
 	    <!-- Create the time stamp -->
 	    <tstamp/>
@@ -102,14 +98,11 @@
 	<target name="all" depends="clean, test">
 	</target>
 	
-	
 	<target name="-post-jar">
 	     <mkdir dir="${dist.dir}/resources"/>
 	     <copy todir="${dist.dir}/resources">
 	         <fileset dir="${basedir}/resources" />
 	     </copy>
 	 </target>
-	
-
 </project>
 
