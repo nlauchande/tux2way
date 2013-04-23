@@ -14,7 +14,6 @@
 	<property name="reports" location="reports"/>
 	<property name="version" location="0.01"/>
 	
-
 	<!-- the names of various distributable files -->
 	<property name="jar_name" value="${project_name}.jar"/>
 	<property name="war_name" value="${project_name}.war"/>
@@ -29,7 +28,6 @@
 
 	<target name="dist" depends="compile" description="generate the distributable files " >
 
-		
 		<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
 	    <jar jarfile="${dist}/${jar_name}" basedir="${build}">
 	    	 <fileset dir="${res}"/>
@@ -105,4 +103,3 @@
 	     </copy>
 	 </target>
 </project>
-
